@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  /* Official PONO POKE Visual DNA Brand Colors */
+  --pono-lime: #77E024;
+  --pono-deep-green: #1F4D2B;
+  --pono-olive-green: #33592E;
+  --pono-ink: #1F4D2B;
+  --pono-bg: #FFFFFF;
+  --pono-canvas: #F5F6F3;
+  --pono-line: #D4E8C6;
+
+  /* Official Ingredient Key Colors */
+  --ing-crab: #F26B3A;
+  --ing-mix: #7BC043;
+  --ing-redcabbage: #8F4FB5;
+  --ing-onion: #D4C0A8;
+  --ing-corn: #FFD23F;
+  --ing-bean: #C8E25A;
+  --ing-seaweed: #2DB68A;
+  --ing-rice: #F4EEE8;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--pono-canvas);
+  overflow: hidden;
+  user-select: none;
+  font-family: "Pretendard", -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+/* DIN-spec geometric numeral voice for quantities, macros, and prices */
+.font-din {
+  font-family: "D-DIN", "DIN Alternate", "Barlow", "Pretendard", sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+@keyframes pono-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.032);
+  }
+}
+
+.pono-btn-pulse {
+  animation: pono-pulse 2.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pono-btn-pulse {
+    animation: none;
+  }
+}
+
+/* Custom sleek scrollbar inside kiosk scrollable trays */
+.kiosk-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.kiosk-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.kiosk-scroll::-webkit-scrollbar-thumb {
+  background: rgba(31, 77, 43, 0.16);
+  border-radius: 9999px;
+}
+.kiosk-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(31, 77, 43, 0.28);
+}

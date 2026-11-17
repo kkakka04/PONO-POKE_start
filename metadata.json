@@ -1,0 +1,6 @@
+{
+  "name": "PONO POKE Kiosk",
+  "description": "Balance, Built by you — Interactive self-order poke bowl kiosk with dynamic radial ingredient visualization.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
